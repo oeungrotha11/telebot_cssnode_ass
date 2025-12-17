@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <div class="card">
+    <h1>Product Notification Bot</h1>
+    <form id="productForm" action="/submit" method="post">
+      <div class="form-row">
+        <label for="productname">Product Name</label>
+        <input type="text" name="productname" placeholder="Enter product name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="price">Price</label>
+        <input type="number" name="price" placeholder="Enter price" required>
+      </div>
+
+      <div class="form-row">
+        <label for="qty">Quantity</label>
+        <input type="number" name="qty" placeholder="Enter quantity" required>
+      </div>
+
+      <div class="form-row">
+        <label for="description">Description</label>
+        <textarea name="description" placeholder="Enter product description"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="created_date">Created Date</label>
+        <input type="date" name="created_date">
+      </div>
+
+      <div class="form-row">
+        <label for="CategoryName">Category</label>
+        <input type="text" name="CategoryName" placeholder="Enter category">
+      </div>
+
+     <div class="actions">
+        <button type="submit">Send To Telegram</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Loader -->
+  <div id="loader" class="loader-overlay" style="display:none;">
+    <div class="spinner"></div>
+  </div>
+  <script src="style.js"></script>
+</body>
+</html>
