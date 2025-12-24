@@ -83,3 +83,51 @@ button:hover {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  gap: 40px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: 1 / span 2; /* make element span both columns */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input, textarea, select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.actions {
+  text-align: center;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}

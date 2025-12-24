@@ -6,12 +6,12 @@
   <title>Product Form</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 <body>
   <div class="card">
     <h1>Product Notification Bot</h1>
-    <form id="productForm" action="/submit" method="post">
+    <form id="productForm" action="/submit" method="post" class="grid-form">
+      
       <div class="form-row">
         <label for="productname">Product Name</label>
         <input type="text" name="productname" placeholder="Enter product name" required>
@@ -28,6 +28,18 @@
       </div>
 
       <div class="form-row">
+        <label for="CategoryName">Category</label>
+        <select name="CategoryName" required>
+          <option value="" hidden>Select Category</option>
+          <option value="Drink">Drink</option>
+          <option value="Soft Drink">Soft Drink</option>
+          <option value="Snack">Snack</option>
+          <option value="Food">Food</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-row full-width">
         <label for="description">Description</label>
         <textarea name="description" placeholder="Enter product description"></textarea>
       </div>
@@ -37,12 +49,7 @@
         <input type="date" name="created_date">
       </div>
 
-      <div class="form-row">
-        <label for="CategoryName">Category</label>
-        <input type="text" name="CategoryName" placeholder="Enter category">
-      </div>
-
-     <div class="actions">
+      <div class="actions full-width">
         <button type="submit">Send To Telegram</button>
       </div>
     </form>
